@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer App</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    
+    <div id="timer-message">Please select a timer before starting</div>
+
+    <div class="container">
+        <div class="timer">
+            <h1>Pomodoro App</h1>
+
+            <div class="btn-container">
+                <button class="btn" id="pomodoro-session">Pomodoro</button>
+                <button class="btn" id="short-break">Short Break</button>
+                <button class="btn" id="long-break">Long Break</button>
+            </div>
+
+            <main>
+                <div class="pomodoro">
+                    <div id="pomodoro-timer" class="timer-display" data-duration="25.00">
+                        <h1>25:00</h1>
+                    </div>
+                    <div id="short-timer" class="timer-display" data-duration="05.00">
+                        <h1>05:00</h1>
+                    </div>
+                    <div id="long-timer" class="timer-display" data-duration="10.00">
+                        <h1>10:00</h1>
+                    </div>
+                </div>
+            </main>
+
+            <div class="buttons">
+                <button id="start">START</button>
+                <button id="stop">STOP</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
