@@ -130,3 +130,19 @@ h1 {
 #start:hover {
     background-color: green;
 }
+
+
+#timer-message {
+    color: white;
+    background-color: tomato;
+    display: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
