@@ -10,3 +10,52 @@
 body {
     background-color: cornflowerblue;
 }
+
+.container {
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.timer {
+    background-color: coral;
+    display: inline-block;
+    padding: 1rem;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: cadetblue;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1.2rem auto;
+}
+
+.button-container {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pomodoro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 2.5rem 0;
+    text-align: center;
+    border-radius: 50%;
+    background-color: darkcyan;
+}
