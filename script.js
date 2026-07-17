@@ -106,3 +106,10 @@ function startTimer (timerDisplay) {
 
     }, 1000);
 }
+
+
+stopBtn.addEventListener('click', () => {
+    if (currentTimer) {
+        clearInterval(myInterval)
+    }
+})
