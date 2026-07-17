@@ -1,0 +1,23 @@
+{
+  "name": "pomodoro-timer-app",
+  "version": "1.0.0",
+  "description": "learning to make an app using electron. thought of making a simple cute pomodoro app.",
+  "homepage": "https://github.com/strawberryskeleton/pomodoro-timer-app#readme",
+  "bugs": {
+    "url": "https://github.com/strawberryskeleton/pomodoro-timer-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strawberryskeleton/pomodoro-timer-app.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^43.1.1"
+  }
+}
