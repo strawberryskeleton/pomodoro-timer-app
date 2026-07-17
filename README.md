@@ -11,6 +11,10 @@ I made this app since i wanted to make an app using electron. tbh it was fairly 
 ## Screemshot
 ![project screenshot](./assets/project-screenshot.png)
 
+
+https://github.com/user-attachments/assets/f610e025-b2f6-4eaa-bebb-15c5812554db
+
+
 ## Credits
 - made by me
 - background img: [pinterest pin](https://in.pinterest.com/pin/1008595279035492543/)
