@@ -39,6 +39,8 @@ session.addEventListener('click', () => {
     session.classList.add('active')
     shortBreak.classList.remove('active')
     longBreak.classList.remove('active')
+
+    currentTimer = pomodoro
 })
 
 shortBreak.addEventListener('click', () => {
@@ -49,6 +51,8 @@ shortBreak.addEventListener('click', () => {
     shortBreak.classList.add('active')
     session.classList.remove('active')
     longBreak.classList.remove('active')
+
+    currentTimer = short
 })
 
 longBreak.addEventListener('click', () => {
@@ -59,4 +63,46 @@ longBreak.addEventListener('click', () => {
     longBreak.classList.add('active')
     shortBreak.classList.remove('active')
     session.classList.remove('active')
+
+    currentTimer = long
 })
+
+
+startBtn.addEventListener('click', () => {
+    if(currentTimer) {
+        startTimer(currentTimer)
+        timerMessage.style.display = "none"
+    } else {
+        timerMessage.style.display = "block"
+    }
+})
+
+function startTimer (timerDisplay) {
+    if (myInterval) {
+        clearInterval(myInterval)
+    }
+
+    timerDuration = timerDisplay.getAttribute('data-duration').split(":")[0]
+
+    let durationInMilliseconds = timerDuration * 60 * 1000
+    let endTimestamp = Date.now() + durationInMilliseconds
+
+    myInterval = setInterval(() => {
+        const timeRemaining = new Date(endTimestamp - Date.now())
+
+        if(timeRemaining < 0) {
+            clearInterval(myInterval)
+            timerDisplay.textContent = "00:00"
+
+            const alarm = new Audio("")
+            alarm.play()
+        } else {
+            const minutes = Math.floor(timeRemaining / 60000)
+            const seconds = ((timeRemaining % 60000) / 1000).toFixed(0)
+            const formattedTime = `${minutes}:${seconds.toString().padStart(2, '0')}`
+
+            timerDisplay.textContent = formattedTime
+        }
+
+    }, 1000);
+}

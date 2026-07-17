@@ -71,11 +71,6 @@ h1 {
     height: 23rem;
 }
 
-.time {
-    font-size: 5rem;
-    margin: 1.2rem auto;
-}
-
 .button-container {
     margin-top: 1.2rem;
     display: fkex;
@@ -102,10 +97,15 @@ h1 {
 }
 
 .timer-display {
-    font-size: 0.5rem;
-    margin-top: 1.2rem;
+    font-size: 5rem;
+    margin-top: 1.2rem auto;
     font-weight: 600;
 }
+
+/* .time {
+    font-size: 5rem !important;
+    margin: 1.2rem auto;
+} */
 
 .buttons {
     margin-top: 0.5rem;
