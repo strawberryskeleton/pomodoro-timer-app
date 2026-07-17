@@ -1,6 +1,6 @@
 
 const pomodoro = document.getElementById('pomodoro-timer')
-const timers = document.getElementById('timer-display')
+const timers = document.querySelectorAll('.timer-display')
 const startBtn = document.getElementById('start')
 const stopBtn = document.getElementById('stop')
 const timerMessage = document.getElementById('timer-message')
@@ -12,6 +12,7 @@ const session = document.getElementById('pomodoro-session')
 const shortBreak = document.getElementById('short-break')
 const longBreak = document.getElementById('long-break')
 
+// console.log("running")
 
 let currentTimer = null
 let myInterval = null
@@ -29,3 +30,33 @@ function hideAll () {
         timer.style.display = "none"
     })
 }
+
+session.addEventListener('click', () => {
+    hideAll()
+
+    pomodoro.style.display = "block"
+
+    session.classList.add('active')
+    shortBreak.classList.remove('active')
+    longBreak.classList.remove('active')
+})
+
+shortBreak.addEventListener('click', () => {
+    hideAll()
+
+    short.style.display = "block"
+
+    shortBreak.classList.add('active')
+    session.classList.remove('active')
+    longBreak.classList.remove('active')
+})
+
+longBreak.addEventListener('click', () => {
+    hideAll()
+
+    long.style.display = "block"
+
+    longBreak.classList.add('active')
+    shortBreak.classList.remove('active')
+    session.classList.remove('active')
+})
